@@ -55,7 +55,7 @@ class MessagesController < ApplicationController
   end
   
   def message_params
-    params.require(:message).permit(:content)
+    params.require(:message).permit(:content, :title)
     #params.require(:message)とすることでmessageモデルのデータであることを宣言する
     #ここでのmessageは params[:content] である。
     #ちなみにparams.require(:controller)とするとmessagesが取得できる。
